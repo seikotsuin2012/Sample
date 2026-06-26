@@ -1,243 +1,249 @@
+```html
 <!DOCTYPE html>
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>【公式】ひだまり整体院｜自費特化・完全予約制</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    
+    <!-- SEO & OGP メタタグ -->
+    <title>【公式】ひだまり整体院｜自費特化・完全予約制で痛みを根本改善</title>
+    <meta name="description" content="東京都のひだまり整体院。院長が最初から最後まで担当する完全予約制のプライベート空間。バキバキしない優しい施術で、慢性的な腰痛や肩こりを根本から改善します。">
+    <meta property="og:title" content="【公式】ひだまり整体院｜自費特化・完全予約制">
+    <meta property="og:description" content="院長がすべて担当！完全予約制のプライベート空間で痛みを根本改善。">
+    <meta property="og:image" content="https://seikotsuin2012.github.io/sample-lp/hero-bg.jpg">
+    <meta property="og:type" content="website">
+
+    <!-- Google Fonts (Noto Sans JP & Shippori Mincho) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Shippori+Mincho:wght@500;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS (CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Noto Sans JP"', 'sans-serif'],
+                        serif: ['"Shippori Mincho"', 'serif'],
+                    },
+                    colors: {
+                        brand: {
+                            DEFAULT: '#ea580c', // オレンジ
+                            light: '#fdba74',
+                            dark: '#c2410c',
+                            bg: '#fff7ed',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- AOS Animation CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
     <style>
-        /* ベース設定 */
-        body {
-            font-family: 'Hiragino Kaku Gothic ProN', 'Meiryo', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f3f4f6;
-            color: #333;
+        /* パルス（脈打つ）アニメーション */
+        @keyframes pulse-btn {
+            0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(6, 199, 85, 0.7); }
+            50% { transform: scale(1.03); box-shadow: 0 0 0 10px rgba(6, 199, 85, 0); }
+            100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(6, 199, 85, 0); }
         }
-        /* スマホサイズに固定して中央寄せ（デモ用） */
-        .wrapper {
-            max-width: 480px;
-            margin: 0 auto;
-            background-color: #ffffff;
-            box-shadow: 0 0 15px rgba(0,0,0,0.1);
-            overflow: hidden;
+        .btn-pulse {
+            animation: pulse-btn 2s infinite;
         }
-        /* ヘッダー */
-        header {
-            background-color: #ffffff;
-            padding: 15px 20px;
-            text-align: center;
-            border-bottom: 3px solid #ea580c; /* 落ち着いた濃いオレンジ */
-        }
-        .logo {
-            color: #ea580c;
-            font-size: 24px;
-            font-weight: bold;
-            margin: 0;
-        }
-        .sub-logo {
-            font-size: 12px;
-            color: #666;
-            margin: 5px 0 0 0;
-        }
-        /* メインビジュアル */
-        .hero {
-            background: linear-gradient(135deg, #ea580c, #f97316);
-            color: white;
-            padding: 50px 20px;
-            text-align: center;
-        }
-        .hero h1 {
-            font-size: 26px;
-            line-height: 1.5;
-            margin-bottom: 15px;
-            text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
-        }
-        .hero p {
-            font-size: 14px;
-            line-height: 1.6;
-            font-weight: bold;
-        }
-        /* 共通セクション設定 */
-        .section {
-            padding: 40px 20px;
-        }
-        .section-title {
-            text-align: center;
-            color: #ea580c;
-            font-size: 22px;
-            margin-bottom: 25px;
-            border-bottom: 2px dashed #fdba74;
-            display: inline-block;
-            padding-bottom: 5px;
-            width: 100%;
-        }
-        /* お悩みチェック */
-        .trouble-box {
-            background-color: #fff7ed;
-            border-radius: 10px;
-            padding: 20px;
-        }
-        .trouble-list {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-        .trouble-list li {
-            position: relative;
-            padding-left: 30px;
-            margin-bottom: 15px;
-            font-weight: bold;
-            line-height: 1.4;
-        }
-        .trouble-list li::before {
-            content: "☑";
-            position: absolute;
-            left: 0;
-            color: #ea580c;
-            font-size: 20px;
-        }
-        /* 選ばれる理由（一人院特化） */
-        .feature-card {
-            border: 2px solid #fdba74;
-            border-radius: 8px;
-            padding: 15px;
-            margin-bottom: 20px;
-            background-color: #ffffff;
-        }
-        .feature-card h3 {
-            color: #c2410c;
-            margin-top: 0;
-            font-size: 18px;
-            text-align: center;
-        }
-        .feature-card p {
-            font-size: 14px;
-            line-height: 1.6;
-            margin-bottom: 0;
-        }
-        /* 料金表（自費特化） */
-        .price-box {
-            background-color: #fff7ed;
-            border: 2px solid #ea580c;
-            border-radius: 10px;
-            padding: 20px;
-            margin-bottom: 20px;
-        }
-        .price-name {
-            font-size: 20px;
-            font-weight: bold;
-            color: #c2410c;
-            text-align: center;
-            margin: 0 0 10px 0;
-            border-bottom: 1px solid #fdba74;
-            padding-bottom: 10px;
-        }
-        .price-detail {
-            display: flex;
-            justify-content: space-between;
-            align-items: baseline;
-            margin-bottom: 10px;
-        }
-        .price-amount {
-            font-size: 28px;
-            font-weight: bold;
-            color: #ea580c;
-        }
-        /* LINE予約ボタン */
-        .cta-btn {
-            display: block;
-            background-color: #06c755;
-            color: white;
-            text-align: center;
-            padding: 18px;
-            border-radius: 30px;
-            text-decoration: none;
-            font-size: 18px;
-            font-weight: bold;
-            box-shadow: 0 4px 10px rgba(6, 199, 85, 0.3);
-            margin: 20px 0;
-        }
-        /* フッター */
-        footer {
-            background-color: #431407;
-            color: white;
-            padding: 30px 20px;
-            text-align: center;
-            font-size: 14px;
-        }
+        /* スマホ追従ボタンのセーフエリア対応 */
+        .pb-safe { padding-bottom: env(safe-area-inset-bottom); }
+        /* アコーディオンのアイコン動作 */
+        details > summary { list-style: none; }
+        details > summary::-webkit-details-marker { display: none; }
+        details[open] summary .plus-icon { display: none; }
+        details:not([open]) summary .minus-icon { display: none; }
     </style>
+
+    <!-- Google Analytics (GA4) ダミーID -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXXXX');
+    </script>
 </head>
-<body>
-    <div class="wrapper">
-        <header>
-            <p class="sub-logo">完全予約制・プライベート空間</p>
-            <h1 class="logo">ひだまり整体院</h1>
+<body class="font-sans bg-gray-100 text-gray-800 pb-24"> <!-- フッター追従ボタンの余白確保 -->
+
+    <div class="max-w-md mx-auto bg-white shadow-xl overflow-hidden relative">
+
+        <!-- ヘッダー -->
+        <header class="bg-white p-4 text-center border-b-4 border-brand">
+            <p class="text-xs text-gray-500 mb-1 font-sans">完全予約制・プライベート空間</p>
+            <h1 class="text-2xl font-bold text-brand font-serif tracking-widest">ひだまり整体院</h1>
         </header>
 
-        <div class="hero">
-            <h1>「ずっと治らない」と<br>諦める前に。</h1>
-            <p>院長が最初から最後まで責任を持って担当。<br>あなただけのプライベート空間で、<br>痛みの根本改善を目指します。</p>
+        <!-- ファーストビュー (画像①書き換え済み) -->
+        <section class="relative h-[80vh] flex items-center justify-center text-center">
+            <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('hero-bg.jpg');"></div>
+            <!-- 黒の半透明カバー (透過率70%) -->
+            <div class="absolute inset-0 bg-black/70"></div>
+            
+            <div class="relative z-10 p-6 w-full" data-aos="fade-up" data-aos-duration="1000">
+                <h2 class="text-white font-serif text-3xl leading-snug font-bold mb-6 drop-shadow-md">
+                    「ずっと治らない」と<br>諦める前に。
+                </h2>
+                <p class="text-white text-sm leading-relaxed font-bold bg-black/40 p-4 rounded-lg backdrop-blur-sm">
+                    院長が最初から最後まで責任を持って担当。<br>
+                    あなただけのプライベート空間で、<br>
+                    痛みの根本改善を目指します。
+                </p>
+            </div>
+        </section>
+
+        <!-- LINEボタン (ヘッダー下) -->
+        <div class="p-4 bg-brand-bg text-center">
+            <a href="#" onclick="gtag('event', 'click', {'event_category': 'LINE_Button', 'event_label': 'Header'});" 
+               class="btn-pulse inline-block w-full bg-[#06c755] text-white font-bold text-lg py-4 rounded-full shadow-lg">
+                LINEで予約・無料相談する
+            </a>
         </div>
 
-        <div class="section">
-            <h2 class="section-title">こんなお悩みありませんか？</h2>
-            <div class="trouble-box">
-                <ul class="trouble-list">
-                    <li>毎回担当の先生が変わるのが不安だ</li>
-                    <li>他の患者さんの声が気になって相談しづらい</li>
-                    <li>マッサージや電気だけで、本当に治るか疑問</li>
-                    <li>待ち時間が長くて通うのがストレス</li>
+        <!-- お悩みセクション (画像②書き換え済み) -->
+        <section class="py-12 px-6">
+            <h2 class="text-center font-serif text-2xl font-bold text-brand mb-8 border-b-2 border-dashed border-brand-light pb-2 inline-block w-full" data-aos="fade-up">
+                こんなお悩みありませんか？
+            </h2>
+            
+            <div class="mb-6 rounded-xl overflow-hidden shadow-md" data-aos="zoom-in">
+                <img src="problem-img.jpg" alt="悩む女性" class="w-full h-auto">
+            </div>
+
+            <div class="bg-brand-bg rounded-xl p-6 shadow-sm border border-brand-light" data-aos="fade-up">
+                <ul class="space-y-4 font-bold text-gray-700">
+                    <li class="flex items-start"><span class="text-brand text-xl mr-2">☑</span> 毎回担当の先生が変わるのが不安だ</li>
+                    <li class="flex items-start"><span class="text-brand text-xl mr-2">☑</span> 他の患者さんの声が気になり相談しづらい</li>
+                    <li class="flex items-start"><span class="text-brand text-xl mr-2">☑</span> マッサージや電気だけで治るか疑問</li>
+                    <li class="flex items-start"><span class="text-brand text-xl mr-2">☑</span> 待ち時間が長くて通うのがストレス</li>
                 </ul>
             </div>
-            <a href="#" class="cta-btn">LINEで予約・無料相談する</a>
-        </div>
+        </section>
 
-        <div class="section" style="background-color: #f9fafb;">
-            <h2 class="section-title">当院が選ばれる3つの理由</h2>
-            <div class="feature-card">
-                <h3>① 院長の私がすべて担当します</h3>
-                <p>大手チェーンのように、通うたびに担当者が変わることはありません。国家資格を持つ院長が、初回から卒業まで一貫してあなたの身体と向き合います。</p>
-            </div>
-            <div class="feature-card">
-                <h3>② 完全予約制のプライベート空間</h3>
-                <p>他の患者様と顔を合わせることなく、リラックスして施術を受けられます。待ち時間もゼロですので、お忙しい方でも安心してご来院いただけます。</p>
-            </div>
-            <div class="feature-card">
-                <h3>③ 慰安ではない「根本改善」</h3>
-                <p>その場しのぎの強いマッサージは行いません。丁寧なカウンセリングから痛みの本当の原因を特定し、戻りのない身体づくりをサポートします。</p>
-            </div>
-        </div>
+        <!-- 選ばれる理由 (画像③④⑤書き換え済み) -->
+        <section class="py-12 px-6 bg-gray-50">
+            <h2 class="text-center font-serif text-2xl font-bold text-brand mb-10 border-b-2 border-dashed border-brand-light pb-2 inline-block w-full" data-aos="fade-up">
+                当院が選ばれる3つの理由
+            </h2>
 
-        <div class="section">
-            <h2 class="section-title">自費施術メニュー</h2>
+            <!-- 特徴1 -->
+            <div class="bg-white rounded-xl shadow-md overflow-hidden mb-8 border border-gray-200" data-aos="fade-up">
+                <img src="feature1.jpg" alt="院長対応" class="w-full h-48 object-cover">
+                <div class="p-5">
+                    <h3 class="font-serif text-xl text-brand-dark font-bold mb-3 text-center">① 院長の私がすべて担当します</h3>
+                    <p class="text-sm leading-relaxed">大手チェーンのように、通うたびに担当者が変わることはありません。国家資格を持つ院長が、初回から卒業まで一貫してあなたの身体と向き合います。</p>
+                </div>
+            </div>
+
+            <!-- 特徴2 -->
+            <div class="bg-white rounded-xl shadow-md overflow-hidden mb-8 border border-gray-200" data-aos="fade-up">
+                <img src="feature2.jpg" alt="個室空間" class="w-full h-48 object-cover">
+                <div class="p-5">
+                    <h3 class="font-serif text-xl text-brand-dark font-bold mb-3 text-center">② 完全予約制のプライベート空間</h3>
+                    <p class="text-sm leading-relaxed">他の患者様と顔を合わせることなく、リラックスして施術を受けられます。待ち時間もゼロですので、お忙しい方でも安心してご来院いただけます。</p>
+                </div>
+            </div>
+
+            <!-- 特徴3 -->
+            <div class="bg-white rounded-xl shadow-md overflow-hidden mb-8 border border-gray-200" data-aos="fade-up">
+                <img src="feature3.jpg" alt="根本改善" class="w-full h-48 object-cover">
+                <div class="p-5">
+                    <h3 class="font-serif text-xl text-brand-dark font-bold mb-3 text-center">③ 慰安ではない「根本改善」</h3>
+                    <p class="text-sm leading-relaxed">その場しのぎの強いマッサージは行いません。丁寧なカウンセリングから痛みの本当の原因を特定し、戻りのない身体づくりをサポートします。</p>
+                </div>
+            </div>
             
-            <div class="price-box">
-                <h3 class="price-name">根本改善・整体コース</h3>
-                <p style="font-size: 13px; margin-top: 0;">慢性的な腰痛、肩こり、頭痛など、どこに行っても良くならない症状の改善を目指す当院のメインコースです。</p>
-                <div class="price-detail">
-                    <span style="font-weight: bold;">1回</span>
-                    <span class="price-amount">6,600<span style="font-size: 16px;">円</span></span>
-                </div>
+            <!-- LINEボタン (中段) -->
+            <div class="text-center mt-8">
+                <a href="#" onclick="gtag('event', 'click', {'event_category': 'LINE_Button', 'event_label': 'Middle'});" 
+                   class="inline-block w-full bg-[#06c755] text-white font-bold text-lg py-4 rounded-full shadow-lg">
+                    まずはLINEで相談してみる
+                </a>
             </div>
+        </section>
 
-            <div class="price-box">
-                <h3 class="price-name">産後骨盤矯正コース</h3>
-                <p style="font-size: 13px; margin-top: 0;">産後の腰痛、股関節の痛み、体型の崩れを優しい施術で整えます。お子様連れでも貸切なので安心です。</p>
-                <div class="price-detail">
-                    <span style="font-weight: bold;">1回</span>
-                    <span class="price-amount">7,700<span style="font-size: 16px;">円</span></span>
-                </div>
+        <!-- Q&A (アコーディオン) -->
+        <section class="py-12 px-6">
+            <h2 class="text-center font-serif text-2xl font-bold text-brand mb-8 border-b-2 border-dashed border-brand-light pb-2 inline-block w-full" data-aos="fade-up">
+                よくあるご質問
+            </h2>
+            <div class="space-y-4" data-aos="fade-up">
+                <!-- Q1 -->
+                <details class="bg-white border border-brand-light rounded-lg shadow-sm group">
+                    <summary class="font-bold p-4 cursor-pointer flex justify-between items-center text-brand-dark">
+                        <span class="flex-1">健康保険は使えますか？</span>
+                        <span class="plus-icon text-2xl leading-none">＋</span>
+                        <span class="minus-icon text-2xl leading-none">－</span>
+                    </summary>
+                    <div class="p-4 border-t border-gray-100 text-sm leading-relaxed bg-brand-bg/50">
+                        当院は痛みの根本改善を目的とした自費診療専門となっておりますため、健康保険はご利用いただけません。
+                    </div>
+                </details>
+                <!-- Q2 -->
+                <details class="bg-white border border-brand-light rounded-lg shadow-sm group">
+                    <summary class="font-bold p-4 cursor-pointer flex justify-between items-center text-brand-dark">
+                        <span class="flex-1">バキバキする痛い施術ですか？</span>
+                        <span class="plus-icon text-2xl leading-none">＋</span>
+                        <span class="minus-icon text-2xl leading-none">－</span>
+                    </summary>
+                    <div class="p-4 border-t border-gray-100 text-sm leading-relaxed bg-brand-bg/50">
+                        いいえ、身体に負担をかけないソフトな施術です。お子様からご高齢の方まで安心して受けていただけます。
+                    </div>
+                </details>
             </div>
+        </section>
 
-            <p style="font-size: 12px; text-align: center; color: #666;">※初診時は別途、初見カウンセリング料2,200円を頂戴いたします。</p>
-            <a href="#" class="cta-btn">LINEで予約状況を確認する</a>
-        </div>
+        <!-- Googleマップ埋め込み -->
+        <section class="py-8 bg-gray-50">
+            <h2 class="text-center font-serif text-2xl font-bold text-brand mb-6">アクセス情報</h2>
+            <!-- レスポンシブマップ (東京駅周辺) -->
+            <div class="w-full h-64">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3240.8280303808788!2d139.7671248!3d35.6812362!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188bfbd89f700b%3A0x277c49ba34ed38!2z5p2x5Lqs6aeF!5e0!3m2!1sja!2sjp!4v1718000000000!5m2!1sja!2sjp" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <div class="p-6 text-center text-sm leading-relaxed">
+                <p class="font-bold text-lg mb-2">ひだまり整体院</p>
+                <p>〒154-0000 東京都世田谷区〇〇1-2-3</p>
+                <p>〇〇線「〇〇駅」徒歩5分</p>
+            </div>
+        </section>
 
-        <footer>
-            <p style="font-size: 18px; font-weight: bold; margin-bottom: 5px;">ひだまり整体院</p>
-            <p style="margin-top: 0; margin-bottom: 20px;">〒000-0000<br>東京都〇〇区〇〇 1-2-3</p>
-            <p style="font-size: 12px;">© 2024 ひだまり整体院 All Rights Reserved.</p>
+        <!-- フッター -->
+        <footer class="bg-[#431407] text-white py-10 px-6 text-center text-sm">
+            <p class="font-serif text-xl font-bold mb-4 tracking-widest">ひだまり整体院</p>
+            <p class="mb-6">完全予約制 / 不定休</p>
+            <p class="text-xs text-gray-400">&copy; 2024 ひだまり整体院 All Rights Reserved.</p>
         </footer>
+
     </div>
+
+    <!-- スマホ追従型 LINE予約ボタン (固定フッター) -->
+    <div class="fixed bottom-0 left-0 w-full z-50 bg-white/90 backdrop-blur-sm border-t border-gray-200 pb-safe shadow-[0_-4px_10px_rgba(0,0,0,0.1)]">
+        <div class="max-w-md mx-auto p-3 flex justify-center">
+            <a href="#" onclick="gtag('event', 'click', {'event_category': 'LINE_Button', 'event_label': 'Floating_Footer'});" 
+               class="btn-pulse flex items-center justify-center w-full bg-[#06c755] text-white font-bold text-lg py-4 rounded-full shadow-md">
+                <span class="mr-2 text-2xl">💬</span> LINEで今すぐ予約する
+            </a>
+        </div>
+    </div>
+
+    <!-- AOS Animation Script -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            once: true, // アニメーションを1回だけ実行
+            offset: 50,  // 少し早めにアニメーション開始
+        });
+    </script>
 </body>
 </html>
+
+
+```
