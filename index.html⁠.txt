@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【公式】ひだまり整体院｜自費特化・完全予約制</title>
+    <style>
+        /* ベース設定 */
+        body {
+            font-family: 'Hiragino Kaku Gothic ProN', 'Meiryo', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f3f4f6;
+            color: #333;
+        }
+        /* スマホサイズに固定して中央寄せ（デモ用） */
+        .wrapper {
+            max-width: 480px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        /* ヘッダー */
+        header {
+            background-color: #ffffff;
+            padding: 15px 20px;
+            text-align: center;
+            border-bottom: 3px solid #ea580c; /* 落ち着いた濃いオレンジ */
+        }
+        .logo {
+            color: #ea580c;
+            font-size: 24px;
+            font-weight: bold;
+            margin: 0;
+        }
+        .sub-logo {
+            font-size: 12px;
+            color: #666;
+            margin: 5px 0 0 0;
+        }
+        /* メインビジュアル */
+        .hero {
+            background: linear-gradient(135deg, #ea580c, #f97316);
+            color: white;
+            padding: 50px 20px;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 26px;
+            line-height: 1.5;
+            margin-bottom: 15px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+        }
+        .hero p {
+            font-size: 14px;
+            line-height: 1.6;
+            font-weight: bold;
+        }
+        /* 共通セクション設定 */
+        .section {
+            padding: 40px 20px;
+        }
+        .section-title {
+            text-align: center;
+            color: #ea580c;
+            font-size: 22px;
+            margin-bottom: 25px;
+            border-bottom: 2px dashed #fdba74;
+            display: inline-block;
+            padding-bottom: 5px;
+            width: 100%;
+        }
+        /* お悩みチェック */
+        .trouble-box {
+            background-color: #fff7ed;
+            border-radius: 10px;
+            padding: 20px;
+        }
+        .trouble-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .trouble-list li {
+            position: relative;
+            padding-left: 30px;
+            margin-bottom: 15px;
+            font-weight: bold;
+            line-height: 1.4;
+        }
+        .trouble-list li::before {
+            content: "☑";
+            position: absolute;
+            left: 0;
+            color: #ea580c;
+            font-size: 20px;
+        }
+        /* 選ばれる理由（一人院特化） */
+        .feature-card {
+            border: 2px solid #fdba74;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 20px;
+            background-color: #ffffff;
+        }
+        .feature-card h3 {
+            color: #c2410c;
+            margin-top: 0;
+            font-size: 18px;
+            text-align: center;
+        }
+        .feature-card p {
+            font-size: 14px;
+            line-height: 1.6;
+            margin-bottom: 0;
+        }
+        /* 料金表（自費特化） */
+        .price-box {
+            background-color: #fff7ed;
+            border: 2px solid #ea580c;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        .price-name {
+            font-size: 20px;
+            font-weight: bold;
+            color: #c2410c;
+            text-align: center;
+            margin: 0 0 10px 0;
+            border-bottom: 1px solid #fdba74;
+            padding-bottom: 10px;
+        }
+        .price-detail {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 10px;
+        }
+        .price-amount {
+            font-size: 28px;
+            font-weight: bold;
+            color: #ea580c;
+        }
+        /* LINE予約ボタン */
+        .cta-btn {
+            display: block;
+            background-color: #06c755;
+            color: white;
+            text-align: center;
+            padding: 18px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            box-shadow: 0 4px 10px rgba(6, 199, 85, 0.3);
+            margin: 20px 0;
+        }
+        /* フッター */
+        footer {
+            background-color: #431407;
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <p class="sub-logo">完全予約制・プライベート空間</p>
+            <h1 class="logo">ひだまり整体院</h1>
+        </header>
+
+        <div class="hero">
+            <h1>「ずっと治らない」と<br>諦める前に。</h1>
+            <p>院長が最初から最後まで責任を持って担当。<br>あなただけのプライベート空間で、<br>痛みの根本改善を目指します。</p>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">こんなお悩みありませんか？</h2>
+            <div class="trouble-box">
+                <ul class="trouble-list">
+                    <li>毎回担当の先生が変わるのが不安だ</li>
+                    <li>他の患者さんの声が気になって相談しづらい</li>
+                    <li>マッサージや電気だけで、本当に治るか疑問</li>
+                    <li>待ち時間が長くて通うのがストレス</li>
+                </ul>
+            </div>
+            <a href="#" class="cta-btn">LINEで予約・無料相談する</a>
+        </div>
+
+        <div class="section" style="background-color: #f9fafb;">
+            <h2 class="section-title">当院が選ばれる3つの理由</h2>
+            <div class="feature-card">
+                <h3>① 院長の私がすべて担当します</h3>
+                <p>大手チェーンのように、通うたびに担当者が変わることはありません。国家資格を持つ院長が、初回から卒業まで一貫してあなたの身体と向き合います。</p>
+            </div>
+            <div class="feature-card">
+                <h3>② 完全予約制のプライベート空間</h3>
+                <p>他の患者様と顔を合わせることなく、リラックスして施術を受けられます。待ち時間もゼロですので、お忙しい方でも安心してご来院いただけます。</p>
+            </div>
+            <div class="feature-card">
+                <h3>③ 慰安ではない「根本改善」</h3>
+                <p>その場しのぎの強いマッサージは行いません。丁寧なカウンセリングから痛みの本当の原因を特定し、戻りのない身体づくりをサポートします。</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">自費施術メニュー</h2>
+            
+            <div class="price-box">
+                <h3 class="price-name">根本改善・整体コース</h3>
+                <p style="font-size: 13px; margin-top: 0;">慢性的な腰痛、肩こり、頭痛など、どこに行っても良くならない症状の改善を目指す当院のメインコースです。</p>
+                <div class="price-detail">
+                    <span style="font-weight: bold;">1回</span>
+                    <span class="price-amount">6,600<span style="font-size: 16px;">円</span></span>
+                </div>
+            </div>
+
+            <div class="price-box">
+                <h3 class="price-name">産後骨盤矯正コース</h3>
+                <p style="font-size: 13px; margin-top: 0;">産後の腰痛、股関節の痛み、体型の崩れを優しい施術で整えます。お子様連れでも貸切なので安心です。</p>
+                <div class="price-detail">
+                    <span style="font-weight: bold;">1回</span>
+                    <span class="price-amount">7,700<span style="font-size: 16px;">円</span></span>
+                </div>
+            </div>
+
+            <p style="font-size: 12px; text-align: center; color: #666;">※初診時は別途、初見カウンセリング料2,200円を頂戴いたします。</p>
+            <a href="#" class="cta-btn">LINEで予約状況を確認する</a>
+        </div>
+
+        <footer>
+            <p style="font-size: 18px; font-weight: bold; margin-bottom: 5px;">ひだまり整体院</p>
+            <p style="margin-top: 0; margin-bottom: 20px;">〒000-0000<br>東京都〇〇区〇〇 1-2-3</p>
+            <p style="font-size: 12px;">© 2024 ひだまり整体院 All Rights Reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>
