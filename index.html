@@ -8,12 +8,8 @@
     <!-- SEO & OGP メタタグ -->
     <title>【公式】ひだまり整体院｜自費特化・完全予約制で痛みを根本改善</title>
     <meta name="description" content="東京都のひだまり整体院。院長が最初から最後まで担当する完全予約制のプライベート空間。バキバキしない優しい施術で、慢性的な腰痛や肩こりを根本から改善します。">
-    <meta property="og:title" content="【公式】ひだまり整体院｜自費特化・完全予約制">
-    <meta property="og:description" content="院長がすべて担当！完全予約制のプライベート空間で痛みを根本改善。">
-    <meta property="og:image" content="https://seikotsuin2012.github.io/sample-lp/hero-bg.jpg">
-    <meta property="og:type" content="website">
 
-    <!-- Google Fonts (Noto Sans JP & Shippori Mincho) -->
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Shippori+Mincho:wght@500;700&display=swap" rel="stylesheet">
@@ -30,7 +26,7 @@
                     },
                     colors: {
                         brand: {
-                            DEFAULT: '#ea580c', // オレンジ
+                            DEFAULT: '#ea580c',
                             light: '#fdba74',
                             dark: '#c2410c',
                             bg: '#fff7ed',
@@ -45,34 +41,20 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <style>
-        /* パルス（脈打つ）アニメーション */
         @keyframes pulse-btn {
             0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(6, 199, 85, 0.7); }
             50% { transform: scale(1.03); box-shadow: 0 0 0 10px rgba(6, 199, 85, 0); }
             100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(6, 199, 85, 0); }
         }
-        .btn-pulse {
-            animation: pulse-btn 2s infinite;
-        }
-        /* スマホ追従ボタンのセーフエリア対応 */
+        .btn-pulse { animation: pulse-btn 2s infinite; }
         .pb-safe { padding-bottom: env(safe-area-inset-bottom); }
-        /* アコーディオンのアイコン動作 */
         details > summary { list-style: none; }
         details > summary::-webkit-details-marker { display: none; }
         details[open] summary .plus-icon { display: none; }
         details:not([open]) summary .minus-icon { display: none; }
     </style>
-
-    <!-- Google Analytics (GA4) ダミーID -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-XXXXXXXXXX');
-    </script>
 </head>
-<body class="font-sans bg-gray-100 text-gray-800 pb-24"> <!-- フッター追従ボタンの余白確保 -->
+<body class="font-sans bg-gray-100 text-gray-800 pb-24">
 
     <div class="max-w-md mx-auto bg-white shadow-xl overflow-hidden relative">
 
@@ -82,17 +64,18 @@
             <h1 class="text-2xl font-bold text-brand font-serif tracking-widest">ひだまり整体院</h1>
         </header>
 
-        <!-- ファーストビュー (画像①書き換え済み) -->
-        <section class="relative h-[80vh] flex items-center justify-center text-center">
-            <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('hero-bg.jpg');"></div>
-            <!-- 黒の半透明カバー (透過率70%) -->
-            <div class="absolute inset-0 bg-black/70"></div>
+        <!-- ファーストビュー (施術シーンの写真に変更＆カバーを薄く) -->
+        <section class="relative h-[75vh] flex items-center justify-center text-center">
+            <!-- 背景画像を feature1.jpg (施術シーン) に変更して分かりやすく -->
+            <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('feature1.jpg?v=2');"></div>
+            <!-- カバーの透過率を70%から30%に下げて明るく -->
+            <div class="absolute inset-0 bg-black/30"></div>
             
             <div class="relative z-10 p-6 w-full" data-aos="fade-up" data-aos-duration="1000">
-                <h2 class="text-white font-serif text-3xl leading-snug font-bold mb-6 drop-shadow-md">
+                <h2 class="text-white font-serif text-3xl leading-snug font-bold mb-6 drop-shadow-lg" style="text-shadow: 0 2px 10px rgba(0,0,0,0.8);">
                     「ずっと治らない」と<br>諦める前に。
                 </h2>
-                <p class="text-white text-sm leading-relaxed font-bold bg-black/40 p-4 rounded-lg backdrop-blur-sm">
+                <p class="text-white text-sm leading-relaxed font-bold bg-black/50 p-4 rounded-lg backdrop-blur-sm">
                     院長が最初から最後まで責任を持って担当。<br>
                     あなただけのプライベート空間で、<br>
                     痛みの根本改善を目指します。
@@ -102,20 +85,20 @@
 
         <!-- LINEボタン (ヘッダー下) -->
         <div class="p-4 bg-brand-bg text-center">
-            <a href="#" onclick="gtag('event', 'click', {'event_category': 'LINE_Button', 'event_label': 'Header'});" 
-               class="btn-pulse inline-block w-full bg-[#06c755] text-white font-bold text-lg py-4 rounded-full shadow-lg">
+            <a href="#" class="btn-pulse inline-block w-full bg-[#06c755] text-white font-bold text-lg py-4 rounded-full shadow-lg">
                 LINEで予約・無料相談する
             </a>
         </div>
 
-        <!-- お悩みセクション (画像②書き換え済み) -->
+        <!-- お悩みセクション -->
         <section class="py-12 px-6">
             <h2 class="text-center font-serif text-2xl font-bold text-brand mb-8 border-b-2 border-dashed border-brand-light pb-2 inline-block w-full" data-aos="fade-up">
                 こんなお悩みありませんか？
             </h2>
             
             <div class="mb-6 rounded-xl overflow-hidden shadow-md" data-aos="zoom-in">
-                <img src="problem-img.jpg" alt="悩む女性" class="w-full h-auto">
+                <!-- キャッシュ対策で ?v=2 を追加 -->
+                <img src="problem-img.jpg?v=2" alt="悩む女性" class="w-full h-auto">
             </div>
 
             <div class="bg-brand-bg rounded-xl p-6 shadow-sm border border-brand-light" data-aos="fade-up">
@@ -128,7 +111,7 @@
             </div>
         </section>
 
-        <!-- 選ばれる理由 (画像③④⑤書き換え済み) -->
+        <!-- 選ばれる理由 -->
         <section class="py-12 px-6 bg-gray-50">
             <h2 class="text-center font-serif text-2xl font-bold text-brand mb-10 border-b-2 border-dashed border-brand-light pb-2 inline-block w-full" data-aos="fade-up">
                 当院が選ばれる3つの理由
@@ -136,7 +119,8 @@
 
             <!-- 特徴1 -->
             <div class="bg-white rounded-xl shadow-md overflow-hidden mb-8 border border-gray-200" data-aos="fade-up">
-                <img src="feature1.jpg" alt="院長対応" class="w-full h-48 object-cover">
+                <!-- 院内全体の写真(hero-bg)をここに移動 -->
+                <img src="hero-bg.jpg?v=2" alt="院長対応" class="w-full h-48 object-cover object-center">
                 <div class="p-5">
                     <h3 class="font-serif text-xl text-brand-dark font-bold mb-3 text-center">① 院長の私がすべて担当します</h3>
                     <p class="text-sm leading-relaxed">大手チェーンのように、通うたびに担当者が変わることはありません。国家資格を持つ院長が、初回から卒業まで一貫してあなたの身体と向き合います。</p>
@@ -145,7 +129,7 @@
 
             <!-- 特徴2 -->
             <div class="bg-white rounded-xl shadow-md overflow-hidden mb-8 border border-gray-200" data-aos="fade-up">
-                <img src="feature2.jpg" alt="個室空間" class="w-full h-48 object-cover">
+                <img src="feature2.jpg?v=2" alt="個室空間" class="w-full h-48 object-cover">
                 <div class="p-5">
                     <h3 class="font-serif text-xl text-brand-dark font-bold mb-3 text-center">② 完全予約制のプライベート空間</h3>
                     <p class="text-sm leading-relaxed">他の患者様と顔を合わせることなく、リラックスして施術を受けられます。待ち時間もゼロですので、お忙しい方でも安心してご来院いただけます。</p>
@@ -154,7 +138,7 @@
 
             <!-- 特徴3 -->
             <div class="bg-white rounded-xl shadow-md overflow-hidden mb-8 border border-gray-200" data-aos="fade-up">
-                <img src="feature3.jpg" alt="根本改善" class="w-full h-48 object-cover">
+                <img src="feature3.jpg?v=2" alt="根本改善" class="w-full h-48 object-cover">
                 <div class="p-5">
                     <h3 class="font-serif text-xl text-brand-dark font-bold mb-3 text-center">③ 慰安ではない「根本改善」</h3>
                     <p class="text-sm leading-relaxed">その場しのぎの強いマッサージは行いません。丁寧なカウンセリングから痛みの本当の原因を特定し、戻りのない身体づくりをサポートします。</p>
@@ -163,20 +147,18 @@
             
             <!-- LINEボタン (中段) -->
             <div class="text-center mt-8">
-                <a href="#" onclick="gtag('event', 'click', {'event_category': 'LINE_Button', 'event_label': 'Middle'});" 
-                   class="inline-block w-full bg-[#06c755] text-white font-bold text-lg py-4 rounded-full shadow-lg">
+                <a href="#" class="inline-block w-full bg-[#06c755] text-white font-bold text-lg py-4 rounded-full shadow-lg">
                     まずはLINEで相談してみる
                 </a>
             </div>
         </section>
 
-        <!-- Q&A (アコーディオン) -->
+        <!-- Q&Aとマップ部分はそのまま省略せずに残しています -->
         <section class="py-12 px-6">
             <h2 class="text-center font-serif text-2xl font-bold text-brand mb-8 border-b-2 border-dashed border-brand-light pb-2 inline-block w-full" data-aos="fade-up">
                 よくあるご質問
             </h2>
             <div class="space-y-4" data-aos="fade-up">
-                <!-- Q1 -->
                 <details class="bg-white border border-brand-light rounded-lg shadow-sm group">
                     <summary class="font-bold p-4 cursor-pointer flex justify-between items-center text-brand-dark">
                         <span class="flex-1">健康保険は使えますか？</span>
@@ -187,7 +169,6 @@
                         当院は痛みの根本改善を目的とした自費診療専門となっておりますため、健康保険はご利用いただけません。
                     </div>
                 </details>
-                <!-- Q2 -->
                 <details class="bg-white border border-brand-light rounded-lg shadow-sm group">
                     <summary class="font-bold p-4 cursor-pointer flex justify-between items-center text-brand-dark">
                         <span class="flex-1">バキバキする痛い施術ですか？</span>
@@ -201,10 +182,8 @@
             </div>
         </section>
 
-        <!-- Googleマップ埋め込み -->
         <section class="py-8 bg-gray-50">
             <h2 class="text-center font-serif text-2xl font-bold text-brand mb-6">アクセス情報</h2>
-            <!-- レスポンシブマップ (東京駅周辺) -->
             <div class="w-full h-64">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3240.8280303808788!2d139.7671248!3d35.6812362!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188bfbd89f700b%3A0x277c49ba34ed38!2z5p2x5Lqs6aeF!5e0!3m2!1sja!2sjp!4v1718000000000!5m2!1sja!2sjp" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
@@ -215,7 +194,6 @@
             </div>
         </section>
 
-        <!-- フッター -->
         <footer class="bg-[#431407] text-white py-10 px-6 text-center text-sm">
             <p class="font-serif text-xl font-bold mb-4 tracking-widest">ひだまり整体院</p>
             <p class="mb-6">完全予約制 / 不定休</p>
@@ -224,11 +202,10 @@
 
     </div>
 
-    <!-- スマホ追従型 LINE予約ボタン (固定フッター) -->
+    <!-- スマホ追従型 LINE予約ボタン -->
     <div class="fixed bottom-0 left-0 w-full z-50 bg-white/90 backdrop-blur-sm border-t border-gray-200 pb-safe shadow-[0_-4px_10px_rgba(0,0,0,0.1)]">
         <div class="max-w-md mx-auto p-3 flex justify-center">
-            <a href="#" onclick="gtag('event', 'click', {'event_category': 'LINE_Button', 'event_label': 'Floating_Footer'});" 
-               class="btn-pulse flex items-center justify-center w-full bg-[#06c755] text-white font-bold text-lg py-4 rounded-full shadow-md">
+            <a href="#" class="btn-pulse flex items-center justify-center w-full bg-[#06c755] text-white font-bold text-lg py-4 rounded-full shadow-md">
                 <span class="mr-2 text-2xl">💬</span> LINEで今すぐ予約する
             </a>
         </div>
@@ -237,10 +214,7 @@
     <!-- AOS Animation Script -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        AOS.init({
-            once: true, // アニメーションを1回だけ実行
-            offset: 50,  // 少し早めにアニメーション開始
-        });
+        AOS.init({ once: true, offset: 50 });
     </script>
 </body>
 </html>
