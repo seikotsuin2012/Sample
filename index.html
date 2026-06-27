@@ -64,18 +64,19 @@
             <h1 class="text-2xl font-bold text-brand font-serif tracking-widest">ひだまり整体院</h1>
         </header>
 
-        <!-- ファーストビュー (施術シーンの写真に変更＆カバーを薄く) -->
-        <section class="relative h-[75vh] flex items-center justify-center text-center">
-            <!-- 背景画像を feature1.jpg (施術シーン) に変更して分かりやすく -->
-            <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('feature1.jpg?v=2');"></div>
-            <!-- カバーの透過率を70%から30%に下げて明るく -->
+        <!-- ファーストビュー (確実に表示されるimgタグ方式に変更) -->
+        <section class="relative h-[75vh] flex items-center justify-center text-center overflow-hidden">
+            <!-- 施術シーンの写真でひと目で整体院と分かるように -->
+            <img src="feature1.jpg?v=3" alt="ひだまり整体院 施術風景" class="absolute inset-0 w-full h-full object-cover object-center">
+            
+            <!-- 黒の半透明カバー (透過率30%で明るく) -->
             <div class="absolute inset-0 bg-black/30"></div>
             
             <div class="relative z-10 p-6 w-full" data-aos="fade-up" data-aos-duration="1000">
                 <h2 class="text-white font-serif text-3xl leading-snug font-bold mb-6 drop-shadow-lg" style="text-shadow: 0 2px 10px rgba(0,0,0,0.8);">
                     「ずっと治らない」と<br>諦める前に。
                 </h2>
-                <p class="text-white text-sm leading-relaxed font-bold bg-black/50 p-4 rounded-lg backdrop-blur-sm">
+                <p class="text-white text-sm leading-relaxed font-bold bg-black/50 p-4 rounded-lg backdrop-blur-sm shadow-lg">
                     院長が最初から最後まで責任を持って担当。<br>
                     あなただけのプライベート空間で、<br>
                     痛みの根本改善を目指します。
@@ -97,8 +98,7 @@
             </h2>
             
             <div class="mb-6 rounded-xl overflow-hidden shadow-md" data-aos="zoom-in">
-                <!-- キャッシュ対策で ?v=2 を追加 -->
-                <img src="problem-img.jpg?v=2" alt="悩む女性" class="w-full h-auto">
+                <img src="problem-img.jpg?v=3" alt="悩む女性" class="w-full h-auto">
             </div>
 
             <div class="bg-brand-bg rounded-xl p-6 shadow-sm border border-brand-light" data-aos="fade-up">
@@ -117,28 +117,27 @@
                 当院が選ばれる3つの理由
             </h2>
 
-            <!-- 特徴1 -->
+            <!-- 特徴1：院長対応（タブレット説明の写真） -->
             <div class="bg-white rounded-xl shadow-md overflow-hidden mb-8 border border-gray-200" data-aos="fade-up">
-                <!-- 院内全体の写真(hero-bg)をここに移動 -->
-                <img src="hero-bg.jpg?v=2" alt="院長対応" class="w-full h-48 object-cover object-center">
+                <img src="feature3.jpg?v=3" alt="院長対応" class="w-full h-48 object-cover object-center">
                 <div class="p-5">
                     <h3 class="font-serif text-xl text-brand-dark font-bold mb-3 text-center">① 院長の私がすべて担当します</h3>
                     <p class="text-sm leading-relaxed">大手チェーンのように、通うたびに担当者が変わることはありません。国家資格を持つ院長が、初回から卒業まで一貫してあなたの身体と向き合います。</p>
                 </div>
             </div>
 
-            <!-- 特徴2 -->
+            <!-- 特徴2：個室空間 -->
             <div class="bg-white rounded-xl shadow-md overflow-hidden mb-8 border border-gray-200" data-aos="fade-up">
-                <img src="feature2.jpg?v=2" alt="個室空間" class="w-full h-48 object-cover">
+                <img src="feature2.jpg?v=3" alt="個室空間" class="w-full h-48 object-cover">
                 <div class="p-5">
                     <h3 class="font-serif text-xl text-brand-dark font-bold mb-3 text-center">② 完全予約制のプライベート空間</h3>
                     <p class="text-sm leading-relaxed">他の患者様と顔を合わせることなく、リラックスして施術を受けられます。待ち時間もゼロですので、お忙しい方でも安心してご来院いただけます。</p>
                 </div>
             </div>
 
-            <!-- 特徴3 -->
+            <!-- 特徴3：根本改善（院内遠景の写真） -->
             <div class="bg-white rounded-xl shadow-md overflow-hidden mb-8 border border-gray-200" data-aos="fade-up">
-                <img src="feature3.jpg?v=2" alt="根本改善" class="w-full h-48 object-cover">
+                <img src="hero-bg.jpg?v=3" alt="根本改善" class="w-full h-48 object-cover">
                 <div class="p-5">
                     <h3 class="font-serif text-xl text-brand-dark font-bold mb-3 text-center">③ 慰安ではない「根本改善」</h3>
                     <p class="text-sm leading-relaxed">その場しのぎの強いマッサージは行いません。丁寧なカウンセリングから痛みの本当の原因を特定し、戻りのない身体づくりをサポートします。</p>
