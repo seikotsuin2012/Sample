@@ -12,7 +12,7 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Shippori+Mincho:wght@500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&family=Shippori+Mincho:wght@500;700;800&display=swap" rel="stylesheet">
     
     <!-- Tailwind CSS (CDN) -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -60,26 +60,39 @@
 
         <!-- ヘッダー -->
         <header class="bg-white p-4 text-center border-b-4 border-brand">
-            <p class="text-xs text-gray-500 mb-1 font-sans">完全予約制・プライベート空間</p>
+            <p class="text-xs text-gray-500 mb-1 font-sans font-bold tracking-wider">完全予約制・プライベート空間</p>
             <h1 class="text-2xl font-bold text-brand font-serif tracking-widest">ひだまり整体院</h1>
         </header>
 
-        <!-- ファーストビュー (新しい画像「main-view.jpg」を指定！) -->
+        <!-- 🌟視認性を極限まで高めたファーストビュー -->
         <section class="relative h-[75vh] flex items-center justify-center text-center overflow-hidden">
+            <!-- 画像は main-view.jpg のまま -->
             <img src="main-view.jpg" alt="ひだまり整体院 施術風景" class="absolute inset-0 w-full h-full object-cover object-center">
             
-            <!-- 黒の半透明カバー -->
-            <div class="absolute inset-0 bg-black/30"></div>
+            <!-- 上下グラデーションで、文字が乗る部分だけを自然に暗くする -->
+            <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-black/20 to-black/70"></div>
             
-            <div class="relative z-10 p-6 w-full" data-aos="fade-up" data-aos-duration="1000">
-                <h2 class="text-white font-serif text-3xl leading-snug font-bold mb-6 drop-shadow-lg" style="text-shadow: 0 2px 10px rgba(0,0,0,0.8);">
-                    「ずっと治らない」と<br>諦める前に。
-                </h2>
-                <p class="text-white text-sm leading-relaxed font-bold bg-black/50 p-4 rounded-lg backdrop-blur-sm shadow-lg">
-                    院長が最初から最後まで責任を持って担当。<br>
-                    あなただけのプライベート空間で、<br>
-                    痛みの根本改善を目指します。
+            <div class="relative z-10 p-5 w-full mt-4" data-aos="fade-in" data-aos-duration="1500">
+                
+                <!-- アイキャッチバッジ -->
+                <p class="inline-block bg-white text-brand font-bold px-4 py-1.5 text-xs rounded-full mb-4 shadow-lg tracking-wide">
+                    自費特化・完全予約制
                 </p>
+
+                <!-- メインコピー（黄色を入れて視認性UP） -->
+                <h2 class="text-white font-serif text-[32px] leading-tight font-extrabold mb-6 tracking-wide" style="text-shadow: 2px 2px 10px rgba(0,0,0,0.9);">
+                    「ずっと治らない」と<br>
+                    <span class="text-[#fde047]">諦める前</span>に。
+                </h2>
+                
+                <!-- リード文（背景を濃く、枠線をつけて読みやすく） -->
+                <div class="bg-black/60 border border-white/20 p-5 rounded-2xl backdrop-blur-md shadow-2xl mx-1">
+                    <p class="text-white text-[15px] leading-loose font-bold tracking-wider">
+                        院長が最初から最後まで責任担当。<br>
+                        あなただけの<span class="text-brand-light">プライベート空間</span>で、<br>
+                        痛みの<span class="text-brand-light">根本改善</span>を目指します。
+                    </p>
+                </div>
             </div>
         </section>
 
