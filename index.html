@@ -1,4 +1,4 @@
-````html
+```html
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -8,8 +8,7 @@
     <!-- SEO & OGP メタタグ -->
     <title>【公式】ひだまり整体院｜自費特化・完全予約制で痛みを根本改善</title>
     <meta name="description" content="東京都のひだまり整体院。院長が最初から最後まで担当する完全予約制のプライベート空間。バキバキしない優しい施術で、慢性的な腰痛や肩こりを根本から改善します。">
-
-    <!-- ▼ここからLINE等で画像を表示させるためのOGP設定を追加▼ -->
+    
     <meta property="og:title" content="【公式】ひだまり整体院｜自費特化・完全予約制で痛みを根本改善">
     <meta property="og:description" content="院長が最初から最後まで担当する完全予約制のプライベート空間。慢性的な腰痛や肩こりを根本から改善します。">
     <meta property="og:type" content="website">
@@ -17,7 +16,6 @@
     <meta property="og:image" content="https://seikotsuin2012.github.io/sample-lp/main-view.jpg">
     <meta property="og:site_name" content="ひだまり整体院">
     <meta name="twitter:card" content="summary_large_image">
-    <!-- ▲ここまで追加▲ -->
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -74,29 +72,22 @@
             <h1 class="text-2xl font-bold text-brand font-serif tracking-widest">ひだまり整体院</h1>
         </header>
 
-        <!-- 🌟顔に被らないように文字を下部に配置したファーストビュー -->
-        <!-- items-end で下寄せ、pb-12 で少し浮かす -->
+        <!-- ファーストビュー -->
         <section class="relative h-[75vh] flex items-end justify-center text-center overflow-hidden pb-12">
-            <!-- 画像の基準位置を上(object-top)にして、顔が見切れにくく調整 -->
-            <img src="main-view.jpg" alt="ひだまり整体院 施術風景" class="absolute inset-0 w-full h-full object-cover object-top">
+            <img src="main-view.jpg?v=20" alt="ひだまり整体院 施術風景" class="absolute inset-0 w-full h-full object-cover object-top">
             
-            <!-- グラデーションを下から上(bg-gradient-to-t)に変更。文字の背景だけ暗くする -->
             <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
             
             <div class="relative z-10 p-5 w-full" data-aos="fade-in" data-aos-duration="1500">
-                
-                <!-- アイキャッチバッジ -->
                 <p class="inline-block bg-white text-brand font-bold px-4 py-1.5 text-xs rounded-full mb-3 shadow-lg tracking-wide">
                     自費特化・完全予約制
                 </p>
 
-                <!-- メインコピー -->
                 <h2 class="text-white font-serif text-[32px] leading-tight font-extrabold mb-5 tracking-wide" style="text-shadow: 2px 2px 10px rgba(0,0,0,0.9);">
                     「ずっと治らない」と<br>
                     <span class="text-[#fde047]">諦める前</span>に。
                 </h2>
                 
-                <!-- リード文 -->
                 <div class="bg-black/50 border border-white/20 p-4 rounded-2xl backdrop-blur-sm shadow-2xl mx-1">
                     <p class="text-white text-[15px] leading-loose font-bold tracking-wider">
                         院長が最初から最後まで責任担当。<br>
@@ -107,7 +98,7 @@
             </div>
         </section>
 
-        <!-- LINEボタン (ヘッダー下) -->
+        <!-- LINEボタン -->
         <div class="p-4 bg-brand-bg text-center">
             <a href="#" class="btn-pulse inline-block w-full bg-[#06c755] text-white font-bold text-lg py-4 rounded-full shadow-lg">
                 LINEで予約・無料相談する
@@ -121,7 +112,7 @@
             </h2>
             
             <div class="mb-6 rounded-xl overflow-hidden shadow-md" data-aos="zoom-in">
-                <img src="problem-img.jpg" alt="悩む女性" class="w-full h-auto">
+                <img src="problem-img.jpg?v=20" alt="悩む女性" class="w-full h-auto">
             </div>
 
             <div class="bg-brand-bg rounded-xl p-6 shadow-sm border border-brand-light" data-aos="fade-up">
@@ -142,7 +133,7 @@
 
             <!-- 特徴1 -->
             <div class="bg-white rounded-xl shadow-md overflow-hidden mb-8 border border-gray-200" data-aos="fade-up">
-                <img src="feature3.jpg" alt="院長対応" class="w-full h-48 object-cover object-center">
+                <img src="feature3.jpg?v=20" alt="院長対応" class="w-full h-48 object-cover object-center">
                 <div class="p-5">
                     <h3 class="font-serif text-xl text-brand-dark font-bold mb-3 text-center">① 院長の私がすべて担当します</h3>
                     <p class="text-sm leading-relaxed">大手チェーンのように、通うたびに担当者が変わることはありません。国家資格を持つ院長が、初回から卒業まで一貫してあなたの身体と向き合います。</p>
@@ -151,7 +142,7 @@
 
             <!-- 特徴2 -->
             <div class="bg-white rounded-xl shadow-md overflow-hidden mb-8 border border-gray-200" data-aos="fade-up">
-                <img src="feature2.jpg" alt="個室空間" class="w-full h-48 object-cover">
+                <img src="feature2.jpg?v=20" alt="個室空間" class="w-full h-48 object-cover">
                 <div class="p-5">
                     <h3 class="font-serif text-xl text-brand-dark font-bold mb-3 text-center">② 完全予約制のプライベート空間</h3>
                     <p class="text-sm leading-relaxed">他の患者様と顔を合わせることなく、リラックスして施術を受けられます。待ち時間もゼロですので、お忙しい方でも安心してご来院いただけます。</p>
@@ -160,14 +151,13 @@
 
             <!-- 特徴3 -->
             <div class="bg-white rounded-xl shadow-md overflow-hidden mb-8 border border-gray-200" data-aos="fade-up">
-                <img src="hero-bg.jpg" alt="根本改善" class="w-full h-48 object-cover">
+                <img src="hero-bg.jpg?v=20" alt="根本改善" class="w-full h-48 object-cover">
                 <div class="p-5">
                     <h3 class="font-serif text-xl text-brand-dark font-bold mb-3 text-center">③ 慰安ではない「根本改善」</h3>
                     <p class="text-sm leading-relaxed">その場しのぎの強いマッサージは行いません。丁寧なカウンセリングから痛みの本当の原因を特定し、戻りのない身体づくりをサポートします。</p>
                 </div>
             </div>
             
-            <!-- LINEボタン (中段) -->
             <div class="text-center mt-8">
                 <a href="#" class="inline-block w-full bg-[#06c755] text-white font-bold text-lg py-4 rounded-full shadow-lg">
                     まずはLINEで相談してみる
@@ -242,7 +232,6 @@
     </script>
 </body>
 </html>
-
 
 
 ```
